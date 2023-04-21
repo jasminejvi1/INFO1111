@@ -1,0 +1,207 @@
+\documentclass[a4paper, 11pt]{report}
+\usepackage{blindtext}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+\usepackage{fix-cm}
+\usepackage[hidelinks]{hyperref}
+\usepackage{graphicx}
+\usepackage{titlesec}
+
+\usepackage[english]{babel}
+
+\geometry{ margin=30mm }
+\counterwithin{subsection}{section}
+\renewcommand\thesection{\arabic{section}.}
+\renewcommand\thesubsection{\thesection\arabic{subsection}.}
+\usepackage{tocloft}
+\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\setlength{\cftsecindent}{2.2em}
+\setlength{\cftsubsecindent}{4.2em}
+\setlength{\cftsecnumwidth}{2em}
+\setlength{\cftsubsecnumwidth}{2.5em}
+
+\titlespacing\section{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+\titlespacing\subsection{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+
+\begin{document}
+\titleformat{\section}
+{\normalfont\fontsize{15}{0}\bfseries}{\thesection}{1em}{}
+\titlespacing{\section}{0cm}{0.5cm}{0.15cm}
+\titleformat{\subsection}
+{\normalfont\fontsize{13}{0}\bfseries}{\thesubsection}{0.5em}{}
+\titlespacing{\section}{0cm}{0.5cm}{0.15cm}
+
+%=============================================================================
+
+\pagenumbering{Alph}
+\begin{titlepage}
+\begin{flushright}
+\includegraphics[width=4cm]{USyd}\\[2cm]
+\end{flushright}
+\center 
+\textbf{\huge INFO1111: Computing 1A Professionalism}\\[0.75cm]
+\textbf{\huge 2023 Semester 1}\\[2cm]
+\textbf{\huge Self-Learning Report}\\[3cm]
+
+\textbf{\huge Submission number: ??}\\[0.75cm]
+\textbf{Github link: ??}\\[2cm]
+
+{\large
+\begin{tabular}{|p{0.35\textwidth}|p{0.55\textwidth}|}
+	\hline
+	{\bf Student name} & JieFei Jia\\
+	{\bf Student ID} & 530495062\\
+	{\bf Topic} & Unity\\
+	{\bf Levels already achieved} & ??\\
+	{\bf Levels in this report} & ??\\
+	\hline
+\end{tabular}
+}
+\thispagestyle{empty}
+\end{titlepage}
+\pagenumbering{arabic}
+
+
+%=============================================================================
+
+\tableofcontents
+\newpage
+\section{Level A: Initial Understanding}
+\vspace{5mm}
+\subsection{Level A Demonstration}
+1.  Create game objects, properties, scenes, layers, tags, assets, prefabs, transforms in Unity.
+2.  Code with C\# in Unity.
+3.  Create an interactive game environment.
+
+\subsection{Learning Approach}
+(To achieve: 1.  Create game objects, properties, scenes, layers, tags, assets, prefabs, transforms in Unity.
+2.  Code with C\# in Unity.)
+
+Unity is a game engine which allows the users to import assets, write code for interaction with objects and create animations. To approach the self-learn topic of making a game with Unity, I first download Unity and research for the use of C\#  and watch videos relating to creating games. 
+
+Secondly, I decide the type of game to make,  giving a brief idea about the game object, scenes, movements and how does the game interact with users. Then I install the package "Pixel Advanture 1" from Unity Asset Store,  from the "Asset" file,  choose the material and colour to set the background, choose the file "Traps" to create different platforms and choose "Pink Man" from the file "Characters", add platforms and the character in prefabs. The platforms are all in the layer "platform".  Next,  add "Animation" in character movements respectively.  Further,  add C\# scripts to create moves on the patterns on the background, allow platforms be created randomly and moving up, control character movement. Moreover, add range on the page to ensure the character's animation of "die" will sholw up when reaching the limit.  I add tag and name it as "platform4" Additionally,  I add "Time" to see how many seconds the game has started,  and "Panel" with buttons "Play again" and "Quit game" under it,  these are in the layer "UI".Others are all in layer "Default".
+
+\subsection{Challenges and Difficulties}
+The aim of my self-learning project is to use Unity to create a game is that the game I want to create is an interactive game in 2D.  As a new learning, I need to have fundamental knowledge with C\# and learn how to manage assets, creating objects and scene, also using project windows to manage the project.  For example, when I wrongly set "die" as "bool" insetead of "trigger" in the "Parameters" part in the project windows "Animator", the game will not show up the parts created in "Panel".  I try to solve the barriers by watching videos about C\#,  after ensuring that the problem is not due to bugs in the code, I searched online looking for possible reasons that can cause the problem and checked in "Animator" and find out what's wrong.
+
+\subsection{Learning Sources}
+\begin{tabular}{|p{0.45\textwidth}|p{0.45\textwidth}|}
+	\hline
+	Learning Source - What source did you use? (Note: Include source details such as links to websites, videos etc.). & Contribution to Learning - How did the source contribute to your learning (i.e. what did you use the source for)?\\
+	\hline
+	Video on simple 2D scene set up in Unity https://www.youtube.com/watch?v=Py 8akSRnwuI & Understand how to set up the scene in Unity\\
+	\hline
+	Video related to making the game character https://www.youtube.com/watch?v=QgZghzbn xeA & Undersrtand how to animate the character movements\\
+	\hline
+	Video about random spawner in Unity https://www.youtube.com/watch?v=VRyiguJalD0 & Understand how to create random platforms moving up in  Unit\\
+	\hline
+	Video about game management in Unity https://www.youtube.com/watch?v=N\_E8wZeKsrA\&t=315s & Giving ideas on how to manage my own game in Unity\\
+	\hline
+	Video of an example of making a 2D game in Unity https://www.youtube.com/watch?v=on9nwbZngyw & Giving ideas on what kind of game I want to create\\
+	\hline
+\end{tabular}
+
+\subsection{Application artifacts}
+Description of the game created:
+I created a 2D game with Unity.  The game character can move left or right or down on the background. There are four platforms named "platform 1",  "platform 2",  "platform 3" and "platform 4",these will spawn randomly on the background. The game character can land on the platforms where "platform 2" can create a angle when the object lands on it,  "platform 3" allows the character jumps up, when the character touches "platform4" or is out of the set range,  it "die". There will be a timer in seconds to show how many seconds the game started.  When the character "die", "End" will appear on the screen and there will be two buttons allowing players to choose "Quit Game" or "Play Again".
+
+\includegraphics[]{/Users/jiefeijia5w4/Desktop/截屏2023-04-21 18.29.09.png}
+\includegraphics[]{/Users/jiefeijia5w4/Desktop/截屏2023-04-21 18.30.04.png}
+\includegraphics[]{/Users/jiefeijia5w4/Desktop/截屏2023-04-21 18.36.49.png}
+\includegraphics[]{/Users/jiefeijia5w4/Desktop/截屏2023-04-21 18.43.11.png}
+\includegraphics[]{/Users/jiefeijia5w4/Desktop/截屏2023-04-21 18.43.37.png}
+\includegraphics[]{/Users/jiefeijia5w4/Desktop/截屏2023-04-21 18.44.18.png}
+\includegraphics[]{/Users/jiefeijia5w4/Desktop/截屏2023-04-21 18.44.38.png}
+\includegraphics[]{/Users/jiefeijia5w4/Desktop/截屏2023-04-21 18.45.03.png}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%=============================================================================
+
+\newpage
+\section{Level B: Basic Application}
+In level B,  my aim is to create an interactive environment,  when the character is in the state of "die",  "Text" and "Panel" will appear on the screen,  showing that the game ends and there are two buttons, allowing players to choose if they want quit or restart. To achieve part, we need to add "Animator to the project windows and add a C\# script naming "GameManager".
+
+\subsection{Level B Demonstration}
+(To achieve: 3. Create an interactive game environment.)
+
+The character show the state "die" when reaching the parts with a tag "platform 4" in which this tag is on platform 4(blue) and is also on the upper, lower limits.  If the character "die", the animation of "die" will be played,  and the word "End" will appear on the screen and player can choose the button "Quit Game" and "Play Again" will appear. 
+A new C\# script named "GameManager" is added.  Further,  "Animator" is added to the project windows,  add parts in the part "Parameters" where "speed" as a float, "isonplatform" as a bool,  if it is True, the character will "die", "die" as a trigger, when it is "die" state is activated, the game will show what is included in "panel".
+\subsection{Application artifacts}
+\newpage
+\includegraphics[]{/Users/jiefeijia5w4/Desktop/截屏2023-04-21 18.37.25.png}
+\includegraphics[]{/Users/jiefeijia5w4/Desktop/截屏2023-04-21 18.38.46.png}
+\includegraphics[]{/Users/jiefeijia5w4/Desktop/截屏2023-04-21 18.39.47.png}
+\includegraphics[]{/Users/jiefeijia5w4/Desktop/截屏2023-04-21 18.47.27.png}
+\includegraphics[]{/Users/jiefeijia5w4/Desktop/截屏2023-04-21 18.47.47.png}
+
+
+%=============================================================================
+
+\newpage
+\section{Level C: Deeper Understanding}
+
+Level C focuses on showing that you have actually understood the tool or technology at a relatively advanced level. You will need to compare it to alternatives, identifying key strengths and weaknesses, and the areas where this tool is most effective. 
+
+\subsection{Strengths}
+What are the key strengths of the item you have learnt? (50-100 words)
+
+\subsection{Weaknesses}
+What are the key weaknesses of the item you have learnt? (50-100 words)
+
+\subsection{Usefulness}
+Describe one scenario under which you believe the topic you have learnt could be useful. (50-100 words)
+
+\subsection{Key Question 1}
+Note: This question is in the table in the ‘Self Learning: List of Topics’ page on Canvas. (50-100 words)
+
+\subsection{Key Question 2}
+Note: This question is in the table in the ‘Self Learning: List of Topics’ page on Canvas. (50-100 words)
+
+
+%=============================================================================
+
+\newpage
+\section{Level D: Evolution of skills}
+\vspace{5mm}
+\subsection{Level D Demonstration}
+
+This is a short description of the application that you have developed. (50-100 words).
+\textit{{\bf IMPORTANT:} You might wish to submit this as part of an earlier submission in order to obtain feedback as to whether this is likely to be acceptable for level D.}
+
+\subsection{Application artifacts}
+
+Include here a description of what you actually created (what does it do? How does it work? How did you create it?). Include any code or other related artefacts that you created (these should also be included in your github repository).
+
+If you do include screengrabs to show what you have done then these should be annotated to explain what it is showing and what the application does.
+
+\subsection{Alternative tools/technologies}
+Identify 2 alternative tools/technologies that can be used instead of the one you studied for your topic. (e.g. if your topic was Python, then you might identify Java and Golang)
+\subsection{Comparative Analysis}
+Describe situations in which both your topic and each of the identified alternatives would be preferred over the others (100-200 words).
+
+
+
+%=============================================================================
+
+\newpage
+
+
+
+\end{document}
+\end{report}
